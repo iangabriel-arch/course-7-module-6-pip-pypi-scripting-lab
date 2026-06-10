@@ -2,6 +2,18 @@ from datetime import datetime
 import os
 
 def generate_log(data):
+    """
+    Generates a timestamped log file from a list of entries.
+
+    Args:
+        data (list): A list of log entry strings.
+
+    Returns:
+        str: The filename of the created log file.
+
+    Raises:
+        ValueError: If data is not a list.
+    """
     # STEP 1: Validate input
     if not isinstance(data, list):
         raise ValueError("Input must be a list.")
